@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, Waves, Sparkles, Code, Palette, Rocket } from "lucide-react";
+import {
+  ArrowRight,
+  Zap,
+  Waves,
+  Sparkles,
+  Code,
+  Palette,
+  Rocket,
+} from "lucide-react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Sphere, Box, MeshDistortMaterial, PerspectiveCamera } from "@react-three/drei";
+import {
+  OrbitControls,
+  Sphere,
+  Box,
+  MeshDistortMaterial,
+  PerspectiveCamera,
+} from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
 
@@ -41,7 +55,12 @@ const AnimatedSphere = () => {
 
   return (
     <Sphere ref={meshRef} args={[1, 32, 32]} position={[0, 0, 0]}>
-      <MeshDistortMaterial color="#06b6d4" emissive="#0ea5e9" distort={0.4} speed={2} />
+      <MeshDistortMaterial
+        color="#06b6d4"
+        emissive="#0ea5e9"
+        distort={0.4}
+        speed={2}
+      />
     </Sphere>
   );
 };
@@ -198,10 +217,14 @@ export default function Index() {
               variants={itemVariants}
               className="text-xl md:text-2xl text-slate-300 mb-8 max-w-xl"
             >
-              Experience stunning 3D animations and immersive interactions that bring your vision to life
+              Experience stunning 3D animations and immersive interactions that
+              bring your vision to life
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex gap-4 flex-wrap">
+            <motion.div
+              variants={itemVariants}
+              className="flex gap-4 flex-wrap"
+            >
               <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/50"
                 whileHover={{ scale: 1.05 }}
@@ -228,7 +251,11 @@ export default function Index() {
               <ambientLight intensity={0.8} />
               <pointLight position={[10, 10, 10]} intensity={1} />
               <FloatingOrb />
-              <OrbitControls autoRotate autoRotateSpeed={2} enableZoom={false} />
+              <OrbitControls
+                autoRotate
+                autoRotateSpeed={2}
+                enableZoom={false}
+              />
             </Canvas>
           </motion.div>
         </div>
@@ -386,7 +413,8 @@ export default function Index() {
               variants={itemVariants}
               className="text-slate-300 mb-8 text-lg"
             >
-              Create immersive web experiences with cutting-edge 3D technology, interactive models, and stunning visual effects.
+              Create immersive web experiences with cutting-edge 3D technology,
+              interactive models, and stunning visual effects.
             </motion.p>
             <motion.button
               variants={itemVariants}
@@ -496,29 +524,63 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-lg font-semibold mb-4">Studio 3D</h3>
-              <p className="text-slate-400">Creating immersive 3D experiences</p>
+              <p className="text-slate-400">
+                Creating immersive 3D experiences
+              </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">3D Gallery</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Docs</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    3D Gallery
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Docs
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Terms
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
